@@ -24,7 +24,7 @@
 
 	<header>
 
-		<p>Hello world!!</p>
+		<p>Hello world!</p>
 
 	</header>
 
