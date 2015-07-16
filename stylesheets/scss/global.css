@@ -47,11 +47,12 @@ table {
   border-spacing: 0; }
 
 body {
-  font-family: sans-serif;
-  font-size: 16px; }
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: white; }
 
 p {
-  font-family: sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
   line-height: 1.25em;
   margin: 0 0 0.5em 0; }
@@ -86,9 +87,33 @@ html {
 body {
   height: 100%; }
 
+#page {
+  height: 100%; }
+
 header {
   height: 100%;
   background: url(../../images/layout/header-background.jpg) center center no-repeat fixed;
-  background-size: cover; }
+  background-size: cover;
+  text-align: center; }
+  header section {
+    top: 50%;
+    left: 50%;
+    position: fixed;
+    -webkit-transform: translateY(-50%) translateX(-50%);
+    -ms-transform: translateY(-50%) translateX(-50%);
+    transform: translateY(-50%) translateX(-50%); }
+    header section .logo {
+      width: 200px;
+      height: 165px;
+      display: inline-block;
+      background: url(../../images/logo/logo-white@200px.png) transparent; }
+    header section h1 {
+      margin: 50px 0 0 0;
+      font-size: 20px;
+      text-transform: uppercase;
+      line-height: 1.5em;
+      color: #707070; }
+      header section h1 .white {
+        color: white; }
 
 /*# sourceMappingURL=global.css.map */

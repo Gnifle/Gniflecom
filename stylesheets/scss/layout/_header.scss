@@ -12,4 +12,28 @@ header {
 	height:					100%;
 	background: 			url(#{$IMAGES}/layout/header-background.jpg) center center no-repeat fixed;
 	background-size: 		cover;
+	text-align: 			center;
+
+	section {
+		@include 				fixed(top 50% left 50%);
+		@include 				transform((translateY(-50%) translateX(-50%)));
+
+		.logo {
+			@include 				size(200px, 165px);
+			display:				inline-block;
+			background:				url(#{$IMAGES}/logo/logo-white@200px.png) transparent;
+		}
+
+		h1 {
+			margin:					50px 0 0 0;
+			font-size: 				20px;
+			text-transform: 		uppercase;
+			line-height: 			1.5em;
+			color:					rgba(112, 112, 112, 1.0);
+
+			.white {
+				color:					$WHITE;
+			}
+		}
+	}
 }
