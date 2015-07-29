@@ -8,6 +8,7 @@
 //-------------------------------------------------------------------------------------------------------------|
 
 	@import "helpers/variables";
+	@import "helpers/keyframes";
 	@import 'helpers/mixins';
 
 //	3. FRAMEWORK & LAYOUT
@@ -15,6 +16,7 @@
 
 	@import "layout/base";
 	@import "layout/header";
+	@import "layout/content";
 	@import "layout/footer";
 
 //	4. COMPONENTS

@@ -1,0 +1,32 @@
+//
+//	1. IMPORTS
+//-------------------------------------------------------------------------------------------------------------|
+
+	@import '../helpers/variables';
+	@import '../helpers/keyframes';
+	@import '../helpers/mixins';
+
+//	2. HEADER
+//-------------------------------------------------------------------------------------------------------------|
+
+#content {
+	z-index: 			100;
+	background: 		transparent;
+	margin-top: 		-25px;
+
+	> aside {
+		position:			relative;
+		background: 		$WHITE;
+		height:				200px;
+
+		&:before {
+			@include 			transform(skewY(-1.5deg) translateY(-50%));
+			content:			'';
+			position: 			absolute;
+			width:				100%;
+			height: 			50px;
+			background: 		rgba(169, 81, 81, 1.0);
+		}
+	}
+
+}

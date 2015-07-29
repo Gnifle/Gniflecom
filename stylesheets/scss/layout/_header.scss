@@ -3,19 +3,21 @@
 //-------------------------------------------------------------------------------------------------------------|
 
 	@import '../helpers/variables';
+	@import '../helpers/keyframes';
 	@import '../helpers/mixins';
 
 //	2. HEADER
 //-------------------------------------------------------------------------------------------------------------|
 
 header {
-	height:					100%;
+	position:				relative;
+	height:					105%;
 	background: 			url(#{$IMAGES}/layout/header-background.jpg) center center no-repeat fixed;
 	background-size: 		cover;
 	text-align: 			center;
 
 	section {
-		@include 				fixed(top 50% left 50%);
+		@include 				absolute(top 50% left 50%);
 		@include 				transform((translateY(-50%) translateX(-50%)));
 
 		.logo {
@@ -35,5 +37,19 @@ header {
 				color:					$WHITE;
 			}
 		}
+	}
+
+	#scroll {
+		@include 			size(100px);
+		position: 			absolute;
+		bottom:				50px;
+		left:				25px;
+		background: 		transparent url(#{$IMAGES}/graphics/mouse.png) no-repeat top center;
+		background-size: 	40px;
+		padding: 			50px 0 0 0;
+		box-sizing: 		border-box;
+		font-size: 			12px;
+		text-transform: 	uppercase;
+		animation: 			pulse 2s ease-in-out infinite;
 	}
 }

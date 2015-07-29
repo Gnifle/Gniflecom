@@ -6,6 +6,7 @@
 		<title>I am not good With PC</title>
 
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 
 		<!-- Base URL -->
 
@@ -28,15 +29,22 @@
 
 			<section>
 				<img src="images/layout/pix.png" class="logo">
-				<h1>Hi ! I'm <span class="white">Daniel</span>, a young designer from <span class="white">Denmark</span>. Welcome to my <span class="white">portfolio</span> !</h1>
-				<h1>Site is in <span class="white">progress</span>. Check back <span class="white">soon</span> !</h1>
+				<h1><span class="white">Goodmorning</span> ! My name's <span class="white">Daniel</span>, a young web designer from <span class="white">Denmark</span>.</h1>
+				<h1>Welcome to my <span class="white">portfolio</span> !</h1>
 			</section>
+
+			<div id="scroll">Scroll</div>
 
 		</header>
 
-		<aside id="content">
+		<div id="content">
 
-		</aside>
+			<aside>
+				<p>Hej</p>
+			</aside>
+
+		</div>
+
 	</div>
 
 </body>
