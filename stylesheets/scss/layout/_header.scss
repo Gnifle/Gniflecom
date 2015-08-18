@@ -11,19 +11,24 @@
 
 header {
 	position:				relative;
-	height:					105%;
-	background: 			url(#{$IMAGES}/layout/header-background.jpg) center center no-repeat fixed;
+	height:					110%;
+	background: 			url(#{$IMAGES}/layout/header-background-workbench.jpg) center center no-repeat fixed;
 	background-size: 		cover;
 	text-align: 			center;
 
 	section {
-		@include 				absolute(top 50% left 50%);
+		@include 				absolute(top 45% left 50%);
 		@include 				transform((translateY(-50%) translateX(-50%)));
 
 		.logo {
 			@include 				size(200px, 165px);
 			display:				inline-block;
-			background:				url(#{$IMAGES}/logo/logo-white@200px.png) transparent;
+			background:				url(#{$IMAGES}/logo/logo-white@200px.png) transparent no-repeat;
+
+			@media screen and (max-width: 320px) {
+				@include size(100px, 82px);
+				background-size: contain;
+			}
 		}
 
 		h1 {
@@ -36,13 +41,22 @@ header {
 			.white {
 				color:					$WHITE;
 			}
+
+			@media screen and (max-width: 320px) {
+				font-size: 12px;
+			}
+		}
+
+		@media screen and (max-width: 320px) {
+			top: 40%;
+			width: 70%;
 		}
 	}
 
 	#scroll {
 		@include 			size(100px);
 		position: 			absolute;
-		bottom:				50px;
+		bottom:				100px;
 		left:				25px;
 		background: 		transparent url(#{$IMAGES}/graphics/mouse.png) no-repeat top center;
 		background-size: 	40px;
@@ -51,5 +65,16 @@ header {
 		font-size: 			12px;
 		text-transform: 	uppercase;
 		animation: 			pulse 2s ease-in-out infinite;
+
+		&:before {
+			content:			'Scroll';
+		}
+
+		@media screen and (max-width: 320px) {
+			zoom: 0.65;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
 	}
 }

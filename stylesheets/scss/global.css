@@ -124,12 +124,12 @@ body {
     opacity: 0.9; } }
 header {
   position: relative;
-  height: 105%;
-  background: url(../../images/layout/header-background.jpg) center center no-repeat fixed;
+  height: 110%;
+  background: url(../../images/layout/header-background-workbench.jpg) center center no-repeat fixed;
   background-size: cover;
   text-align: center; }
   header section {
-    top: 50%;
+    top: 45%;
     left: 50%;
     position: absolute;
     -webkit-transform: translateY(-50%) translateX(-50%);
@@ -139,7 +139,12 @@ header {
       width: 200px;
       height: 165px;
       display: inline-block;
-      background: url(../../images/logo/logo-white@200px.png) transparent; }
+      background: url(../../images/logo/logo-white@200px.png) transparent no-repeat; }
+      @media screen and (max-width: 320px) {
+        header section .logo {
+          width: 100px;
+          height: 82px;
+          background-size: contain; } }
     header section h1 {
       margin: 50px 0 0 0;
       font-size: 20px;
@@ -148,11 +153,18 @@ header {
       color: #707070; }
       header section h1 .white {
         color: white; }
+      @media screen and (max-width: 320px) {
+        header section h1 {
+          font-size: 12px; } }
+    @media screen and (max-width: 320px) {
+      header section {
+        top: 40%;
+        width: 70%; } }
   header #scroll {
     width: 100px;
     height: 100px;
     position: absolute;
-    bottom: 50px;
+    bottom: 100px;
     left: 25px;
     background: transparent url(../../images/graphics/mouse.png) no-repeat top center;
     background-size: 40px;
@@ -161,6 +173,14 @@ header {
     font-size: 12px;
     text-transform: uppercase;
     animation: pulse 2s ease-in-out infinite; }
+    header #scroll:before {
+      content: 'Scroll'; }
+    @media screen and (max-width: 320px) {
+      header #scroll {
+        zoom: 0.65;
+        left: 0;
+        right: 0;
+        margin: auto; } }
 
 @keyframes pulse {
   0% {
@@ -183,17 +203,23 @@ header {
   background: transparent;
   margin-top: -25px; }
   #content > aside {
-    position: relative;
+    -webkit-transform: skewY(-1.5deg);
+    -ms-transform: skewY(-1.5deg);
+    transform: skewY(-1.5deg);
     background: white;
-    height: 200px; }
-    #content > aside:before {
-      -webkit-transform: skewY(-1.5deg) translateY(-50%);
-      -ms-transform: skewY(-1.5deg) translateY(-50%);
-      transform: skewY(-1.5deg) translateY(-50%);
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 50px;
-      background: #a95151; }
+    height: 200px;
+    border-top: 3px solid red; }
+    #content > aside > div:not(.showcase) {
+      -webkit-transform: skewY(1.5deg);
+      -ms-transform: skewY(1.5deg);
+      transform: skewY(1.5deg); }
+
+.showcase {
+  box-sizing: border-box;
+  padding: 5px;
+  float: left;
+  width: 50%;
+  height: 300px;
+  background: #c8c800; }
 
 /*# sourceMappingURL=global.css.map */

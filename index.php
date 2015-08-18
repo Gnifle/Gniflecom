@@ -33,19 +33,31 @@
 				<h1>Welcome to my <span class="white">portfolio</span> !</h1>
 			</section>
 
-			<div id="scroll">Scroll</div>
+			<div id="scroll"></div>
 
 		</header>
 
 		<div id="content">
 
 			<aside>
-				<p>Hej</p>
+				<div class="showcase">Hej</div>
+				<div class="showcase">med dig</div>
+				<div>
+					<p>Hej</p>
+				</div>
 			</aside>
 
 		</div>
 
 	</div>
+
+	<script>
+
+		$(document).ready(function() {
+
+		})
+
+	</script>
 
 </body>
 </html>
