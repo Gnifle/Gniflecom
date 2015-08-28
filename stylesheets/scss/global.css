@@ -97,6 +97,15 @@ h6 {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 0.9; } }
+@keyframes showcase-zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); } }
 html {
   height: 100%; }
 
@@ -122,10 +131,19 @@ body {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 0.9; } }
+@keyframes showcase-zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); } }
 header {
   position: relative;
   height: 110%;
-  background: url(../../images/layout/header-background-workbench.jpg) center center no-repeat fixed;
+  background: url(../../images/layout/header-background-workbench.jpg) center center no-repeat;
   background-size: cover;
   text-align: center; }
   header section {
@@ -164,7 +182,7 @@ header {
     width: 100px;
     height: 100px;
     position: absolute;
-    bottom: 100px;
+    bottom: 75px;
     left: 25px;
     background: transparent url(../../images/graphics/mouse.png) no-repeat top center;
     background-size: 40px;
@@ -198,6 +216,15 @@ header {
     -ms-transform: scale(1);
     transform: scale(1);
     opacity: 0.9; } }
+@keyframes showcase-zoom {
+  0% {
+    -webkit-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    transform: scale(1, 1); }
+  100% {
+    -webkit-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1); } }
 #content {
   z-index: 100;
   background: transparent;
@@ -206,20 +233,81 @@ header {
     -webkit-transform: skewY(-1.5deg);
     -ms-transform: skewY(-1.5deg);
     transform: skewY(-1.5deg);
+    padding: 6px 0 0 0;
     background: white;
-    height: 200px;
-    border-top: 3px solid red; }
+    height: 300px; }
     #content > aside > div:not(.showcase) {
       -webkit-transform: skewY(1.5deg);
       -ms-transform: skewY(1.5deg);
       transform: skewY(1.5deg); }
 
 .showcase {
-  box-sizing: border-box;
-  padding: 5px;
-  float: left;
-  width: 50%;
   height: 300px;
-  background: #c8c800; }
+  position: relative;
+  box-sizing: border-box;
+  float: left;
+  overflow: hidden;
+  border-bottom: 3px solid white; }
+  .showcase .showcase-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-repeat: no-repeat;
+    transition: all .3s ease-out; }
+    .showcase .showcase-inner#da-claudio {
+      background: url(../../images/content/restaurant.jpg) right top;
+      background-size: cover; }
+    .showcase .showcase-inner#tina-scharff {
+      background: url(../../images/content/haircut.jpg) center top;
+      background-size: cover; }
+    .showcase .showcase-inner#travel {
+      background: url(../../images/content/travel.jpg) center top;
+      background-size: cover; }
+    .showcase .showcase-inner#ecoteck {
+      background: url(../../images/content/ecoteck.jpeg) center top;
+      background-size: cover; }
+    .showcase .showcase-inner#asae {
+      background: url(../../images/content/asae.jpg) center top;
+      background-size: cover; }
+    .showcase .showcase-inner > a:link {
+      width: 100%;
+      height: 100%;
+      display: block; }
+  .showcase a:link {
+    -webkit-transform: skewY(1.5deg);
+    -ms-transform: skewY(1.5deg);
+    transform: skewY(1.5deg);
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    top: 10px;
+    padding: 20px;
+    z-index: 5;
+    text-decoration: none; }
+    .showcase a:link p {
+      font-size: 22px;
+      color: white; }
+  .showcase:hover .showcase-inner {
+    transform: scale(1.1, 1.1); }
+  .showcase.show50:nth-child(even) {
+    border-left: 3px solid white; }
+    .showcase.show50:nth-child(even) > a:link {
+      text-align: right; }
+  .showcase.show50:nth-child(odd) {
+    border-right: 3px solid white; }
+  .showcase.show50 {
+    width: 50%; }
+  .showcase.show33 {
+    width: 33.3%; }
+  .showcase.show33:nth-child(3n) > a:link {
+    text-align: right; }
+  .showcase.show33:nth-child(3n-1) > a:link {
+    text-align: center; }
+  .showcase.show33:not(:nth-child(3n)) {
+    border-right: 3px solid white; }
+  .showcase.show33:not(:nth-child(3n-2)) {
+    border-left: 3px solid white; }
 
 /*# sourceMappingURL=global.css.map */

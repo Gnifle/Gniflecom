@@ -40,10 +40,48 @@
 		<div id="content">
 
 			<aside>
-				<div class="showcase">Hej</div>
-				<div class="showcase">med dig</div>
-				<div>
-					<p>Hej</p>
+				<div class="showcase show50">
+					<a href="projects/da-claudio">
+						<p>Fine Italian dining in central Copenhagen</p>
+					</a>
+					<article class="showcase-inner" id="da-claudio">
+						<a href="projects/da-claudio"></a>
+					</article>
+				</div>
+				<div class="showcase show50">
+					<a href="projects/tina-scharff">
+						<p>Men's haircut with a touch of variation</p>
+					</a>
+					<article class="showcase-inner" id="tina-scharff">
+						<a href="projects/tina-scharff"></a>
+					</article>
+				</div>
+			</aside>
+
+			<aside>
+				<div class="showcase show33">
+					<a href="projects/fyns-rejse">
+						<p>Taking care of your perfect holiday</p>
+					</a>
+					<article class="showcase-inner" id="travel">
+						<a href="projects/fyns-rejse"></a>
+					</article>
+				</div>
+				<div class="showcase show33">
+					<a href="projects/ecoteck">
+						<p>Staying warm the eco-way</p>
+					</a>
+					<article class="showcase-inner" id="ecoteck">
+						<a href="projects/ecoteck"></a>
+					</article>
+				</div>
+				<div class="showcase show33">
+					<a href="projects/asae">
+						<p>Rent your place - the easy way</p>
+					</a>
+					<article class="showcase-inner" id="asae">
+						<a href="projects/asae"></a>
+					</article>
 				</div>
 			</aside>
 
@@ -52,6 +90,16 @@
 	</div>
 
 	<script>
+
+		$(window).scroll(function() {
+
+			if($(this).scrollTop() > 20) {
+				$('#scroll').hide();
+			} else {
+				$('#scroll').show();
+			}
+
+		})
 
 		$(document).ready(function() {
 

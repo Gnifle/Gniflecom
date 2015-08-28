@@ -16,9 +16,9 @@
 
 	> aside {
 		@include 			transform(skewY(-1.5deg));
+		padding: 6px 0 0 0;
 		background: 		$WHITE;
-		height:				200px;
-		border-top:			3px solid red;
+		height:				300px;
 
 		> div:not(.showcase) {
 			@include 			transform(skewY(1.5deg));
@@ -28,12 +28,101 @@
 }
 
 .showcase {
-	//@include 			transform(skewY(-1.5deg));
+	height: 300px;
+	position: relative;
 	box-sizing: border-box;
-	padding: 5px;
 	float: left;
-	width:			50%;
-	height:			300px;
-	background:		$YELLOW;
+	overflow: hidden;
+	border-bottom: 3px solid $WHITE;
 
+	.showcase-inner {
+		@include size(100%, 100%);
+		position: relative;
+		background-repeat: no-repeat;
+		transition:  all .3s ease-out;
+
+		&#da-claudio {
+			background: url(#{$IMAGES}/content/restaurant.jpg) right top;
+			background-size: cover;
+		}
+		&#tina-scharff {
+			background: url(#{$IMAGES}/content/haircut.jpg) center top;
+			background-size: cover;
+		}
+		&#travel {
+			background: url(#{$IMAGES}/content/travel.jpg) center top;
+			background-size: cover;
+		}
+		&#ecoteck {
+			 background: url(#{$IMAGES}/content/ecoteck.jpeg) center top;
+			 background-size: cover;
+		 }
+		&#asae {
+			background: url(#{$IMAGES}/content/asae.jpg) center top;
+			background-size: cover;
+		}
+
+		> a:link {
+			@include size(100%, 100%);
+			display: block;
+		}
+	}
+
+	a:link {
+		@include transform(skewY(1.5deg));
+		@include size(100%);
+		box-sizing: border-box;
+		display: block;
+		position: absolute;
+		top: 10px;
+		padding: 20px;
+		z-index: 5;
+		text-decoration: none;
+
+		p {
+			font-size: 22px;
+			color:	$WHITE;
+		}
+	}
+
+	&:hover .showcase-inner {
+		transform: scale(1.1, 1.1);
+
+	}
+
+	&.show50:nth-child(even) {
+		border-left: 3px solid $WHITE;
+
+		> a:link {
+			text-align: right;
+		}
+	}
+
+	&.show50:nth-child(odd) {
+		border-right: 3px solid $WHITE;
+	}
+
+	&.show50 {
+		width: 50%;
+	}
+
+	&.show33 {
+		width: 33.3%;
+	}
+
+	&.show33:nth-child(3n) > a:link {
+		text-align: right;
+	}
+
+	&.show33:nth-child(3n-1) > a:link {
+		text-align: center; 
+	}
+
+	&.show33:not(:nth-child(3n)) {
+		border-right: 3px solid $WHITE;
+	}
+
+	&.show33:not(:nth-child(3n-2)) {
+		border-left: 3px solid $WHITE;
+	}
 }
