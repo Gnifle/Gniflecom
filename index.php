@@ -15,6 +15,8 @@
 
 		<!-- Fonts -->
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
 
 		<!-- JQuery plugins -->
 		<script type="text/javascript" src="javascripts/jQuery/jquery-1.11.3.min.js"></script>
@@ -42,7 +44,7 @@
 			<aside>
 				<div class="showcase show50">
 					<a href="projects/da-claudio">
-						<p>Fine Italian dining in central Copenhagen</p>
+						<p>Fine Italian dining in the heart of Copenhagen</p>
 					</a>
 					<article class="showcase-inner" id="da-claudio">
 						<a href="projects/da-claudio"></a>
@@ -81,6 +83,17 @@
 					</a>
 					<article class="showcase-inner" id="asae">
 						<a href="projects/asae"></a>
+					</article>
+				</div>
+			</aside>
+
+			<aside>
+				<div class="showcase show100">
+					<a href="projects/undal">
+						<p>Your car in safe hands</p>
+					</a>
+					<article class="showcase-inner" id="auto">
+						<a href="projects/undal"></a>
 					</article>
 				</div>
 			</aside>

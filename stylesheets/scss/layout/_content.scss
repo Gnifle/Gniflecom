@@ -28,12 +28,13 @@
 }
 
 .showcase {
+	@extend %disableSelection;
 	height: 300px;
 	position: relative;
 	box-sizing: border-box;
 	float: left;
 	overflow: hidden;
-	border-bottom: 3px solid $WHITE;
+	//border-bottom: 3px solid $WHITE;
 
 	.showcase-inner {
 		@include size(100%, 100%);
@@ -54,11 +55,15 @@
 			background-size: cover;
 		}
 		&#ecoteck {
-			 background: url(#{$IMAGES}/content/ecoteck.jpeg) center top;
+			 background: url(#{$IMAGES}/content/ecoteck.jpeg) center center;
 			 background-size: cover;
 		 }
 		&#asae {
 			background: url(#{$IMAGES}/content/asae.jpg) center top;
+			background-size: cover;
+		}
+		&#auto {
+			background: url(#{$IMAGES}/content/auto.jpg) center center;
 			background-size: cover;
 		}
 
@@ -80,7 +85,9 @@
 		text-decoration: none;
 
 		p {
-			font-size: 22px;
+			font-family: 'Roboto Condensed', sans-serif;
+			font-weight: 300;
+			font-size: 32px;
 			color:	$WHITE;
 		}
 	}
@@ -96,6 +103,10 @@
 		> a:link {
 			text-align: right;
 		}
+	}
+
+	&.show100 {
+		width: 100%;
 	}
 
 	&.show50:nth-child(odd) {
