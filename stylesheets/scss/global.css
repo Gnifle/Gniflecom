@@ -398,7 +398,7 @@ header {
       background: url(../../images/content/travel.jpg) center top;
       background-size: cover; }
     .showcase .showcase-inner#ecoteck {
-      background: url(../../images/content/ecoteck.jpeg) center center;
+      background: url(../../images/content/ecoteck.jpg) center center;
       background-size: cover; }
     .showcase .showcase-inner#asae {
       background: url(../../images/content/asae.jpg) center top;
@@ -430,7 +430,8 @@ header {
       font-family: 'Roboto Condensed', sans-serif;
       font-weight: 300;
       font-size: 32px;
-      color: white; }
+      color: white;
+      line-height: 1.1; }
     .showcase a:link:nth-child(1) div {
       position: relative;
       top: -10px;
@@ -440,7 +441,8 @@ header {
         font-family: 'Roboto Condensed', sans-serif;
         font-weight: 300;
         font-size: 14px;
-        color: white; }
+        color: white;
+        line-height: 1.1; }
   .showcase a:link:nth-child(2) {
     -webkit-transform: skewY(1.5deg);
     -ms-transform: skewY(1.5deg);
@@ -533,7 +535,7 @@ header {
   .showcase.show33:not(:nth-child(3n-2)) {
     border-left: 3px solid white; }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
   .showcase {
     width: 100% !important; }
     .showcase:not(:last-child) {
@@ -547,8 +549,10 @@ header {
     padding: 10px; }
     .showcase a:link:nth-child(1) > p:nth-child(1) {
       font-size: 20px; }
-    .showcase a:link:nth-child(1) > div p {
-      font-size: 12px; } }
+    .showcase a:link:nth-child(1) > div {
+      top: 0; }
+      .showcase a:link:nth-child(1) > div p {
+        font-size: 10px; } }
 #content > aside {
   *zoom: 1; }
   #content > aside:before, #content > aside:after {

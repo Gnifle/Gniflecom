@@ -54,7 +54,7 @@
 			background-size: cover;
 		}
 		&#ecoteck {
-			 background: url(#{$IMAGES}/content/ecoteck.jpeg) center center;
+			 background: url(#{$IMAGES}/content/ecoteck.jpg) center center;
 			 background-size: cover;
 		 }
 		&#asae {
@@ -93,6 +93,7 @@
 			font-weight: 300;
 			font-size: 32px;
 			color:	$WHITE;
+			line-height: 1.1;
 		}
 
 		div {
@@ -106,6 +107,7 @@
 				font-weight: 300;
 				font-size: 14px;
 				color:	$WHITE;
+				line-height: 1.1;
 			}
 		}
 	}
@@ -248,7 +250,7 @@
 	}
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 414px) {
 	.showcase {
 		width: 100% !important;
 
@@ -270,8 +272,12 @@
 			font-size: 20px;
 		}
 
-		> div p {
-			font-size: 12px;
+		> div {
+			top: 0;
+
+			p {
+				font-size: 10px;
+			}
 		}
 	}
 }
