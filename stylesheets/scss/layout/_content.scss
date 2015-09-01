@@ -15,10 +15,10 @@
 	margin-top: 		-25px;
 
 	> aside {
+		@extend %clearfix;
 		@include 			transform(skewY(-1.5deg));
 		padding: 6px 0 0 0;
 		background: 		$WHITE;
-		height:				300px;
 
 		> div:not(.showcase) {
 			@include 			transform(skewY(1.5deg));
@@ -34,7 +34,6 @@
 	box-sizing: border-box;
 	float: left;
 	overflow: hidden;
-	//border-bottom: 3px solid $WHITE;
 
 	.showcase-inner {
 		@include size(100%, 100%);
@@ -73,7 +72,12 @@
 		}
 	}
 
-	a:link {
+	a:link, a:visited, a:active, a:hover {
+		color: $WHITE;
+		text-decoration: none;
+	}
+
+	a:link:nth-child(1) {
 		@include transform(skewY(1.5deg));
 		@include size(100%);
 		box-sizing: border-box;
@@ -84,33 +88,109 @@
 		z-index: 5;
 		text-decoration: none;
 
-		p {
+		> p:nth-child(1) {
 			font-family: 'Roboto Condensed', sans-serif;
 			font-weight: 300;
 			font-size: 32px;
 			color:	$WHITE;
 		}
+
+		div {
+			position: relative;
+			top: -10px;
+			left: 1px;
+
+			p {
+				display: block;
+				font-family: 'Roboto Condensed', sans-serif;
+				font-weight: 300;
+				font-size: 14px;
+				color:	$WHITE;
+			}
+		}
 	}
 
-	&:hover .showcase-inner {
-		transform: scale(1.1, 1.1);
+	a:link:nth-child(2) {
+		@include transform(skewY(1.5deg));
+		@include size(200px, 50px);
+		position: absolute;
+		bottom: 30px;
+		display: block;
+		border: 2px solid $WHITE;
+		text-align: center;
+		text-decoration: none;
+		z-index: 5;
 
+		> p {
+			@include prefix(transition, color .3s ease-out);
+			@include transform(translateY(-50%));
+			position: relative;
+			top: 50%;
+			padding: 5px;
+			color: lighten($BLACK, 0.1);
+			font-size: 12px;
+			font-family: 'Roboto', sans-serif;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		&:before {
+			@include prefix(transition, background .3s ease-out);
+			@include size(192px, 42px);
+			content: '';
+			position: absolute;
+			top: 3px;
+			left: 3px;
+			background: transparentize($WHITE, 0.25);
+			border: 1px solid $WHITE;
+		}
+	}
+
+	&:hover {
+
+		.showcase-inner {
+			transform: scale(1.05, 1.05);
+		}
+
+		a:link:nth-child(2) > p {
+			color: $BLACK;
+		}
+
+		a:link:nth-child(2):before {
+			background: transparentize($WHITE, 0.4);
+		}
 	}
 
 	&.show50:nth-child(even) {
 		border-left: 3px solid $WHITE;
 
-		> a:link {
+		> a:link:nth-child(1) {
 			text-align: right;
+		}
+
+		> a:link:nth-child(2) {
+			right: 20px;
 		}
 	}
 
 	&.show100 {
 		width: 100%;
+
+		> a:link:nth-child(1) {
+			text-align: left;
+		}
+
+		> a:link:nth-child(2) {
+			left: 20px;
+		}
 	}
 
 	&.show50:nth-child(odd) {
 		border-right: 3px solid $WHITE;
+
+		> a:link:nth-child(2) {
+			left: 20px;
+		}
 	}
 
 	&.show50 {
@@ -119,14 +199,44 @@
 
 	&.show33 {
 		width: 33.3%;
-	}
 
-	&.show33:nth-child(3n) > a:link {
-		text-align: right;
-	}
+		> a:link:nth-child(1) {
+			text-align: left;
+		}
 
-	&.show33:nth-child(3n-1) > a:link {
-		text-align: center; 
+		&:nth-child(3n) {
+
+			> a:link:nth-child(1) {
+				text-align: right;
+			}
+
+			> a:link:nth-child(2) {
+				right: 20px;
+			}
+		}
+
+		&:nth-child(3n-1) {
+
+			> a:link:nth-child(1) {
+				text-align: center;
+			}
+
+			> a:link:nth-child(2) {
+				@include transform(translateX(-50%) skewY(1.5deg));
+				left: 50%;
+			}
+		}
+
+		&:nth-child(3n-2) {
+
+			> a:link:nth-child(1) {
+				text-align: left;
+			}
+
+			> a:link:nth-child(2) {
+				left: 20px;
+			}
+		}
 	}
 
 	&.show33:not(:nth-child(3n)) {
@@ -135,5 +245,33 @@
 
 	&.show33:not(:nth-child(3n-2)) {
 		border-left: 3px solid $WHITE;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	.showcase {
+		width: 100% !important;
+
+		&:not(:last-child) {
+			border-width: 0 0 6px 0 !important;
+			border-style: solid !important;
+			border-color: $WHITE !important;
+		}
+
+		&:last-child {
+			border: 0 !important;
+		}
+	}
+
+	.showcase a:link:nth-child(1) {
+		padding: 10px;
+
+		> p:nth-child(1) {
+			font-size: 20px;
+		}
+
+		> div p {
+			font-size: 12px;
+		}
 	}
 }

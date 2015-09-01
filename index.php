@@ -17,12 +17,17 @@
 		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,700' rel='stylesheet' type='text/css'>
 		<link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,300,700' rel='stylesheet' type='text/css'>
 
 		<!-- JQuery plugins -->
 		<script type="text/javascript" src="javascripts/jQuery/jquery-1.11.3.min.js"></script>
 
 		<!-- Custom Javascripts -->
-
+		<script type="text/javascript">
+			$( document ).ready(function() {
+				$('#page').css("opacity", 1.0);
+			});
+		</script>
 	</head>
 <body>
 
@@ -45,6 +50,13 @@
 				<div class="showcase show50">
 					<a href="projects/da-claudio">
 						<p>Fine Italian dining in the heart of Copenhagen</p>
+						<div>
+							<p>Ristorante Da Claudio &raquo; da-claudio.dk</p>
+							<p>HTML &amp; CSS, CMS, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/da-claudio">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="da-claudio">
 						<a href="projects/da-claudio"></a>
@@ -53,6 +65,13 @@
 				<div class="showcase show50">
 					<a href="projects/tina-scharff">
 						<p>Men's haircut with a touch of variation</p>
+						<div>
+							<p>Coiffeur Tina Scharff &raquo; frisør-tinescharff.dk</p>
+							<p>HTML &amp; CSS, CMS, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/tina-scharff">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="tina-scharff">
 						<a href="projects/tina-scharff"></a>
@@ -64,6 +83,13 @@
 				<div class="showcase show33">
 					<a href="projects/fyns-rejse">
 						<p>Taking care of your perfect holiday</p>
+						<div>
+							<p>Fyns Rejsebureau &raquo; fynsrejsebureau.dk</p>
+							<p>HTML &amp; CSS, CMS, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/fyns-rejse">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="travel">
 						<a href="projects/fyns-rejse"></a>
@@ -72,6 +98,13 @@
 				<div class="showcase show33">
 					<a href="projects/ecoteck">
 						<p>Staying warm the eco-way</p>
+						<div>
+							<p>Ecoteck &raquo; ecoteck.dk</p>
+							<p>HTML &amp; CSS, CMS, Newsletter, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/ecoteck">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="ecoteck">
 						<a href="projects/ecoteck"></a>
@@ -80,6 +113,13 @@
 				<div class="showcase show33">
 					<a href="projects/asae">
 						<p>Rent your place - the easy way</p>
+						<div>
+							<p>ASAE ApS &raquo; asae.dk</p>
+							<p>HTML &amp; CSS, CMS, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/asae">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="asae">
 						<a href="projects/asae"></a>
@@ -91,6 +131,13 @@
 				<div class="showcase show100">
 					<a href="projects/undal">
 						<p>Your car in safe hands</p>
+						<div>
+							<p>Undal Auto Service &raquo; undal.dk</p>
+							<p>HTML &amp; CSS, CMS, Photoshop</p>
+						</div>
+					</a>
+					<a href="projects/undal">
+						<p>Read more</p>
 					</a>
 					<article class="showcase-inner" id="auto">
 						<a href="projects/undal"></a>

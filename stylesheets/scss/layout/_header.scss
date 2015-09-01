@@ -9,6 +9,11 @@
 //	2. HEADER
 //-------------------------------------------------------------------------------------------------------------|
 
+#page {
+	opacity: 0.0;
+	transition: opacity 1s ease-out;
+}
+
 header {
 	position:				relative;
 	height:					110%;
